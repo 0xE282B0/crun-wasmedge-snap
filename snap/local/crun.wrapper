@@ -1,0 +1,3 @@
+#!/bin/sh
+export SNAP=/snap/crun-wasmedge/current
+$SNAP/snap/command-chain/snapcraft-runner crun $@
