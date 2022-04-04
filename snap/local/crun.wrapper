@@ -1,3 +1,6 @@
 #!/bin/sh
-export SNAP=/snap/crun-wasmedge/current
+# WARNING: Only use _LIBCONTAINER_CLONED_BINARY=1 when 
+#          the crun binary is mounted on a read-only 
+#          file system to avoid CVE-2019-5736.
+export _LIBCONTAINER_CLONED_BINARY=1
 $SNAP/snap/command-chain/snapcraft-runner crun $@
